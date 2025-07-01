@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Nuel Music</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body class="checkout-page">
+
+  <main class="checkout-container">
+    <h1>Complete Your Purchase</h1>
+
+    <form id="checkout-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <button type="submit" id="confirm-btn">Confirm Purchase</button>
+
+      <div class="back-link">
+        <a href="products.html">&#8592; Back to Products</a>
+      </div>
+    </form>
+  </main>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-inner">
+      <h2>Thank you!</h2>
+      <p>Your request is being processed. a message will be sent to yor email soon </p>
+      <button id="closepopup">OK</button>
+    </div>
+  </div>
+
+  <script src="JavaScript/script.js"></script>
+</body>
+</html>
