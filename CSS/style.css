@@ -1,0 +1,646 @@
+/* ===== NUEL LANDING PAGE ===== */
+body.nuel-landing {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background image */
+.landing-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/WhatsApp\ Image\ 2025-06-28\ at\ 08.52.14_ca3b8d72.jpg'); /* Replace with your background */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Main welcome container */
+.landing-container {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.welcome-img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.landing-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ff7675;
+}
+
+.subtext {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* ENTER Button */
+.enter-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  background-color: #00cec9;
+  color: #000;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.enter-btn:hover {
+  background-color: #01a29d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(-50%); }
+}
+
+
+/* ===== ABOUT NUEL PAGE ===== */
+body.nuel-about {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+}
+
+.nuel-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nuel-header h1 {
+  font-size: 2.7em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.nuel-header .highlight {
+  color: #74b9ff;
+  text-shadow: 0 0 8px #74b9ff;
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: #b2bec3;
+  margin-top: 10px;
+}
+
+.bio {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #dfe6e9;
+  margin-bottom: 50px;
+}
+
+/* GALLERY STYLE */
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.gallery img {
+  width: 220px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON STYLE */
+.nuel-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 60px;
+}
+
+.glow-btn {
+  padding: 14px 28px;
+  font-size: 1em;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.glow-btn.blue {
+  background-color: #74b9ff;
+  box-shadow: 0 0 15px #74b9ff88;
+}
+
+.glow-btn.green {
+  background-color: #55efc4;
+  box-shadow: 0 0 15px #55efc488;
+}
+
+.glow-btn.yellow {
+  background-color: #ffeaa7;
+  box-shadow: 0 0 15px #ffeaa788;
+}
+
+.glow-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+.footer-note {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 30px;
+}
+
+
+
+/* ===== LEARN PAGE (Nuel Lessons) ===== */
+/* General reset and layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.learn-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+  overflow: hidden; /* REMOVE this if it breaks scroll */
+}
+
+/* Sidebar design */
+.sidebar {
+  width: 260px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-right: 2px solid #333;
+  overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.lesson-menu {
+  list-style: none;
+}
+
+.lesson-menu li {
+  margin: 10px 0;
+  background: #292929;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lesson-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.lesson-menu li:hover {
+  background-color: #444;
+}
+
+/* Content area */
+.content-area {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 100vh;
+  background: url('../images/bg-art.jpg') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+.content-area section {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.content-area h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #ffdc91;
+  border-left: 4px solid #ffdc91;
+  padding-left: 10px;
+}
+
+video,
+embed {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Scrollbar styling */
+.content-area::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-area::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body.learn-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #333;
+  }
+
+  .content-area {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  video,
+  embed {
+    height: 300px;
+  }
+}
+
+
+
+/* Popup message */
+.popup {
+  background-color: rgb(16, 235, 169);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup.open {
+  opacity: 1;
+  z-index: 999;
+}
+/* Premium Plan Layout */
+.pricing-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background:brown;
+  color: gold;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #444;
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.plan input[type="radio"] {
+  margin-bottom: 10px;
+}
+
+.plan-label h2 {
+  color: #f1c40f;
+}
+
+.plan-label ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plan-label li {
+  margin: 8px 0;
+}
+
+/* Payment Form */
+.payment-form {
+  background: #f9f9f9;
+  padding: 25px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.payment-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.payment-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+.payment-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #f1c40f;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.payment-form button:hover {
+  background: #d4aa00;
+}
+
+.navigation-links {
+  text-align: center;
+  margin-top: 30px;
+}
+.nav-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: yellowgreen;
+}
+.nav-btn:hover {
+  background-color: grey;
+}
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body.nuel-products {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  color: #f5f5f5;
+  padding: 30px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card */
+.product {
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 12px 0 5px;
+  color: #fff;
+}
+
+.product p {
+  color: #ffd369;
+  font-weight: bold;
+}
+
+/* Buy Button */
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #ffd369;
+  color: #1f1f1f;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #ffb830;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #999;
+}
+
+
+
+/* Checkout Page */
+.checkout-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #2b2b2b;
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.checkout-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd369;
+}
+
+.checkout-container form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.checkout-container form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+  border-radius: 6px;
+  background: #444;
+  color: #fff;
+}
+
+#confirm-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #ffd369;
+  color: #1f1f1f;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#confirm-btn:hover {
+  background: #ffb830;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup.open {
+  display: flex;
+}
+
+.popup-inner {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #333;
+  max-width: 400px;
+}
+
+.popup-inner h2 {
+  color: #1f1f1f;
+  margin-bottom: 15px;
+}
+
+.popup-inner button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffd369;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Back Link */
+.back-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.back-link a {
+  color: #ffd369;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
